@@ -1,13 +1,17 @@
 package main
 
 import (
+	"flag"
 	"fmt"
 	"time"
 )
 
 func main() {
+	n := flag.Int("n", 5, "Til verdi")
+	flag.Parse()
+
+	to := *n
 	from := 0
-	to := 50000000
 	sum := 0
 	start := time.Now()
 	sum += getSummen(from, to)
